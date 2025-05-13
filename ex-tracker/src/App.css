@@ -1,0 +1,452 @@
+/* Main App Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #f5f7fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+.App {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+/* Finance Summary Section */
+.finance-summary {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
+}
+
+.summary-header {
+  margin-bottom: 1.2rem;
+  color: #333;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.summary-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.summary-card {
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.summary-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08);
+}
+
+.summary-card h3 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 0.8rem;
+  color: #555;
+}
+
+.summary-card .amount {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.income {
+  background: linear-gradient(to right, #e3fff3, #f7fffa);
+  border-left: 4px solid #32cd32;
+}
+
+.income .amount {
+  color: #32cd32;
+}
+
+.expense {
+  background: linear-gradient(to right, #fff0f0, #fff5f5);
+  border-left: 4px solid #ff4757;
+}
+
+.expense .amount {
+  color: #ff4757;
+}
+
+.balance {
+  background: linear-gradient(to right, #f0f8ff, #f5faff);
+  border-left: 4px solid #3498db;
+}
+
+.balance.positive .amount {
+  color: #32cd32;
+}
+
+.balance.negative .amount {
+  color: #ff4757;
+}
+
+/* Navigation Buttons */
+.navigation-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.nav-btn {
+  padding: 0.8rem 1.5rem;
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #555;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.nav-btn:hover {
+  background-color: #e0e0e0;
+}
+
+.nav-btn.active {
+  background-color: #3498db;
+  color: white;
+}
+
+/* Transaction Form Container */
+.container {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.header {
+  margin-bottom: 1.5rem;
+}
+
+.header h4 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Form Styling */
+.form-data form {
+  display: flex;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .form-data form {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    align-items: end;
+  }
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #555;
+}
+
+input, select {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.add-trans-btn {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-trans-btn:hover {
+  background-color: #2980b9;
+}
+
+/* Transaction Table */
+.table-data {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  overflow-x: auto;
+}
+
+.trans-heading {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+th, td {
+  padding: 1rem;
+  text-align: left;
+}
+
+th {
+  background-color: #c6d7e9;
+  font-weight: 600;
+  color: #555;
+}
+
+tr {
+  border-bottom: 1px solid #eee;
+  transition: background-color 0.2s ease;
+}
+
+tr:last-child {
+  border-bottom: none;
+}
+
+tr:hover {
+  background-color: #f8f9fa;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #c2daf3;
+}
+
+/* Loan Component - Assuming similar structure as transaction form */
+/* You can adjust these styles once you create the Loan component */
+.loan-container {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.loan-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .loan-form {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    align-items: end;
+  }
+}
+
+.loan-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+}
+
+.loan-status-active {
+  color: #3498db;
+  font-weight: 600;
+}
+
+.loan-status-paid {
+  color: #32cd32;
+  font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .summary-cards {
+    grid-template-columns: 1fr;
+  }
+  
+  th, td {
+    padding: 0.8rem 0.5rem;
+    font-size: 0.9rem;
+  }
+}
+  
+ /* Add these styles to your existing CSS file */
+
+.navigation-buttons {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.nav-btn {
+  padding: 20px 20px;
+  margin: 0 10px;
+  background-color: #e4dede;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 900;
+  transition: all 0.3s ease;
+}
+
+.nav-btn.active {
+  background-color: rgb(227, 90, 90);
+  color: white;
+}
+
+.balance-display {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.balance-display .positive {
+  color: #4caf50;
+}
+
+.balance-display .negative {
+  color: #f44336;
+}
+
+.error-message {
+  background-color: #ffebee;
+  color: #c62828;
+  padding: 10px 15px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border-left: 5px solid #f44336;
+}
+
+.payment-btn:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* Ensure the table has proper styling */
+.table-data {
+  margin-top: 20px;
+  overflow-x: auto;
+}
+
+.table-data table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-data th, .table-data td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.table-data th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.table-data tr:hover {
+  background-color: #f5f5f5;
+}
+
+/* Make sure the loan cards have proper styling */
+.loan-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.loan-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.loan-actions button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.edit-btn {
+  background-color: #2196f3;
+  color: white;
+}
+
+.delete-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+.loan-details {
+  margin-bottom: 15px;
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.detail-label {
+  font-weight: 500;
+  color: #666;
+}
+
+.progress-bar {
+  height: 10px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  margin: 15px 0;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background-color: #4caf50;
+}
+
+.payment-btn {
+  background-color: #28692a;
+  color: white;
+  border: none;
+  padding: 15px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
