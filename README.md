@@ -47,3 +47,16 @@ Uses jsPDF and xlsx libraries
 
 📸 Screenshots
 
+https://github.com/Nitish-Shamra/Expense-Tracker/blob/main/ex-tracker/src/assets/Screenshot%202025-07-06%20135020.png
+
+https://github.com/Nitish-Shamra/Expense-Tracker/blob/main/ex-tracker/src/assets/Screenshot%202025-07-06%20134949.png
+
+https://github.com/Nitish-Shamra/Expense-Tracker/blob/main/ex-tracker/src/assets/Screenshot%202025-07-06%20134845.png
+
+https://github.com/Nitish-Shamra/Expense-Tracker/blob/main/ex-tracker/src/assets/Screenshot%202025-07-06%20134819.png
+
+https://github.com/Nitish-Shamra/Expense-Tracker/blob/main/ex-tracker/src/assets/Screenshot%202025-07-06%20134754.png
+
+
+
+
